@@ -20,9 +20,9 @@ function wcb2017_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on WordCamp Base 2017, use a find and replace
-	 * to change 'wcb2017' to the name of your theme in all the template files.
+	 * to change 'wordcamporg' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'wcb2017', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'wordcamporg', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function wcb2017_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'wcb2017' ),
+		'primary' => esc_html__( 'Primary', 'wordcamporg' ),
 	) );
 
 	/*
@@ -87,9 +87,9 @@ add_action( 'after_setup_theme', 'wcb2017_content_width', 0 );
  */
 function wcb2017_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'wcb2017' ),
+		'name'          => esc_html__( 'Sidebar', 'wordcamporg' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'wcb2017' ),
+		'description'   => esc_html__( 'Add widgets here.', 'wordcamporg' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
