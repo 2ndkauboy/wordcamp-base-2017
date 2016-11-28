@@ -46,4 +46,26 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<?php // After Header Widget Areas for homepage and all other pages. ?>
+	<?php if ( is_front_page() ) : ?>
+		<aside id="after-header-widgets" class="widget-area front-page" role="complementary">
+			<?php dynamic_sidebar( 'after-header-homepage' ); ?>
+		</aside><!-- #after-header-widgets .widget-area .front-page -->
+	<?php else : ?>
+		<aside id="after-header-widgets" class="widget-area" role="complementary">
+			<?php dynamic_sidebar( 'after-header' ); ?>
+		</aside><!-- #after-header-widgets .widget-area -->
+	<?php endif; ?>
+
 	<div id="content" class="site-content">
+
+		<?php // Before Content Widget Areas for homepage and all other pages. ?>
+		<?php if ( is_front_page() ) : ?>
+			<aside id="before-content-widgets" class="widget-area front-page" role="complementary">
+				<?php dynamic_sidebar( 'before-content-homepage' ); ?>
+			</aside><!-- #before-content-widgets .widget-area .front-page -->
+		<?php else : ?>
+			<aside id="before-content-widgets" class="widget-area" role="complementary">
+				<?php dynamic_sidebar( 'before-content' ); ?>
+			</aside><!-- #before-content-widgets .widget-area -->
+		<?php endif; ?>
